@@ -1,0 +1,376 @@
+.logo {
+  color: #E5FFFF;
+}
+nav {
+ font-family: sans-serif;
+  background-color:  #161748; /* Dark background */
+  display: flex;
+  padding: 2px 0;
+  max-width: 100%;
+  margin: 0 auto; /*Centers the nav */
+  justify-content: space-around;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+/* Link styling */
+nav a {
+  color: white;
+  text-decoration: none; /* Removes underline */
+  padding: 14px 20px;
+}
+
+/* Hover effect */
+nav a:hover {
+  background-color: #00CCCC;
+  border-radius: 4px;
+}
+
+/*----------------------------------------------------------------------- */
+
+/* styling the hamburger*/
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 25px 0;
+}
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 2px 5px;
+}
+
+/* --------------------------------------------------------------------------- */
+/* Responsive styling */
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+    padding: 12px 20px;
+    position: relative;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0; /* full width */
+    
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    
+    padding: 10px 0;
+    margin: 0;
+
+    border-top: 1px solid #eee;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+
+    display: none;
+
+    /* smooth animation */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  nav ul.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    color: #333;
+  }
+
+  nav ul li:hover {
+    background: #f5f5f5;
+  }
+
+  .menu-toggle {
+    display: flex;
+    cursor: pointer;
+  }
+}
+/*--------------------------------------------------------------*/
+#hero {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* makes it fill screen */
+  padding: 30px 20px;
+  background-color: #f5f5f5; /* optional: gives it identity */
+}
+
+/* Hero content */
+.hero-content {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  max-width: 800px;
+}
+
+/* Add spacing inside hero */
+.hero-content p {
+  margin: 20px 0;
+}
+
+
+.btn-primary {
+  background-color: #39a0ca;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; 
+}
+.btn-primary a {
+  color: white;
+  text-decoration: none;
+}
+
+/*------------------------CALL TO ACTION-------------------------- */
+#cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 60px 20px; /* creates separation */
+  background-color: #ffffff;
+}
+
+.cta-content {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  max-width: 700px;
+}
+
+.btn_2 {
+  background-color: #39a0ca; /* Primary Blue */
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+.btn_2:hover {
+  background-color: #0056b3; 
+}
+.btn_2 a {
+  color: white;
+  text-decoration: none;
+}
+
+/* <!------------------------- PROJECTS (4 CARDS) -----------------------> */
+#projects {
+  color: #333;
+  font-family: sans-serif;
+  flex: 1 1 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0;
+}
+.card-container{
+  font-family: sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  background-color: #c3c2c2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  height: 150px;
+  flex-wrap: wrap;
+}
+.card2{
+  flex: 1 1 100%;
+  max-width: 100%;
+  background-color: #c3c2c2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px;
+  padding: 20px;
+  width: 1070px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* <!---------------------- TESTIMONIAL ----------------------> */
+#testimonial {
+  font-family: sans-serif;
+  flex: 1 1 100%;
+  max-width: 100%;
+  background-color: #ebe8e8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px;
+  padding: 20px;
+  width: 1070px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* <!---------------------- CONTACT -----------------------> */
+/* CONTACT SECTION */
+#contact {
+  font-family: sans-serif;
+  padding: 80px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #111827;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+#contact form div {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#contact label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  /* transition: all 0.3s ease; */
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#contact button {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contact button:hover {
+  background: #1e40af;
+}
+
+
+/* FOOTER */
+footer {
+  font-family: sans-serif;
+  background: #111827;
+  color: #e5e7eb;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-content p {
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #60a5fa;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  #contact form {
+    padding: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-links {
+    margin-top: 10px;
+  }
+}
